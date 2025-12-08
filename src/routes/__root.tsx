@@ -39,7 +39,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 			</head>
 			<body>
 				<Header />
-				<main className='p-4 bg-gray-900'>{children}</main>
+				<main className='p-4 bg-gray-900 h-screen text-white'>
+					{children}
+				</main>
 				<TanStackDevtools
 					config={{
 						position: 'bottom-right',

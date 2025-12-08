@@ -1,7 +1,23 @@
 import { createFileRoute } from '@tanstack/react-router';
+import MonacoEditorComponent from '@/components/monaco-editor';
 
 export const Route = createFileRoute('/')({ component: App });
 
 function App() {
-	return <div>Hello World</div>;
+	return (
+		<div className='flex flex-row gap-4'>
+			<MonacoEditorComponent
+				value={() => {
+					return 'Hello World';
+				}}
+				onChange={() => {}}
+			/>
+			<MonacoEditorComponent
+				value={() => {
+					return 'Hello World';
+				}}
+				onChange={() => {}}
+			/>
+		</div>
+	);
 }
